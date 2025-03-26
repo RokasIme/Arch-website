@@ -1,6 +1,6 @@
 :root {
   /* width */
-  --inner-width: min(calc(100%-32px), 1312px);
+  --inner-width: min(calc(100% - 200px), 1312px);
 }
 * {
   box-sizing: border-box;
@@ -16,19 +16,38 @@ body {
 
 .upper__part {
   background-color: #f9f2e2;
+  height: 70vh;
 }
 
 .lower__part {
   background-color: #f9c65d;
 }
-header {
+.header__inner {
   display: flex;
   width: var(--inner-width);
   justify-content: space-between;
+}
+
+header {
+  display: flex;
   align-items: center;
+  justify-content: center;
+  margin: 20px 0;
 }
 .header__left {
   display: flex;
   justify-content: flex-start;
   gap: 20px;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.main__inner {
+  display: flex;
+  flex-direction: row;
+  width: var(--inner-width);
 }
