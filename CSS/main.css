@@ -1,3 +1,10 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto/static/Roboto-Bold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+
 :root {
   /* width */
   --inner-width: min(calc(100% - 200px), 1312px);
@@ -111,7 +118,7 @@ main {
 .lower__part__txt {
   display: flex;
   flex-direction: column;
-  padding: 40px;
+  padding: 40px 0;
   gap: 20px;
   width: 42%;
   text-align: right;
@@ -119,19 +126,51 @@ main {
 .lower__part__txt__main {
   font-size: 1.8rem;
   text-transform: capitalize;
+  font-family: Roboto;
+  letter-spacing: 0.1em;
 }
 
 .pic__text_all {
   display: flex;
   flex-direction: row;
+  width: 100%;
   gap: 20px;
+}
+
+.pic__text {
+  width: 33%;
+}
+
+.first {
+  transform: translateY(-100px);
+}
+
+.second {
+  transform: translateY(-50px);
 }
 
 .img_small {
   width: 100%;
   height: 200px;
-  object-fit: cover;
   border-radius: 20px;
+  object-fit: cover;
+}
+
+.text_in_pic {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px 20px;
+  margin-top: -30px;
+  position: relative;
+}
+
+.text_in_pic_main {
+  font-size: 1em;
+}
+
+.p_text {
+  line-height: 1.6em;
+  padding-top: 10px;
 }
 
 @media (max-width: 600px) {
@@ -159,6 +198,26 @@ main {
   }
   .img__frame {
     position: unset;
+    width: 100%;
+  }
+
+  .lower__part__txt {
+    display: flex;
+    width: 100%;
+  }
+
+  .pic__text_all {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .first {
+    transform: translateY(0px);
+  }
+  .second {
+    transform: translateY(0px);
+  }
+  .pic__text {
     width: 100%;
   }
 }
