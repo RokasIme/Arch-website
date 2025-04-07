@@ -49,8 +49,57 @@ header {
   display: flex;
   justify-content: flex-start;
   gap: 20px;
+  position: relative;
+}
+.burger {
+  background-color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+}
+.burger > span {
+  position: absolute;
+  left: 8px;
+  width: 10px;
+  height: 1.5px;
+  background-color: #db524e;
+  border-radius: 2px;
+}
+.burger > span:nth-child(1) {
+  top: 30%;
 }
 
+.burger > span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.burger > span:nth-child(3) {
+  bottom: 30%;
+}
+
+.socials {
+  display: flex;
+  gap: 20px;
+}
+
+.socials a {
+  display: flex;
+  text-decoration: none;
+  color: #db524e;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 25px;
+  font-family: Roboto;
+}
 main {
   display: flex;
   width: 100%;
@@ -61,6 +110,7 @@ main {
 .main__inner {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   width: var(--inner-width);
   margin: 0 calc(50% - 400px);
   position: relative;
